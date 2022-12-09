@@ -10,83 +10,87 @@ using Biblioteque.Repository;
 
 namespace Biblioteque.Controllers
 {
-    public class GenresController : Controller
+    public class AuteursController : Controller
     {
         private readonly BiblioContext _context;
-        private GenreRepository GenreRepository;
+        private readonly AuteurRepository auteurRepository;
 
-        public GenresController(BiblioContext context)
+        public AuteursController(BiblioContext context)
         {
             _context = context;
-            GenreRepository = new GenreRepository(_context);
+            auteurRepository = new AuteurRepository(context);
         }
 
-        // GET: Genres
+        // GET: Auteurs
         public async Task<IActionResult> Index()
         {
-              return View(GenreRepository.FindAll());
+              return View(auteurRepository.FindAll());
         }
 
-        // GET: Genres/Details/5
+        // GET: Auteurs/Details/5
         public async Task<IActionResult> Details(long? id)
         {
-            if (id == null || _context.Genres == null)
+            if (id == null || _context.Auteurs == null)
             {
                 return NotFound();
             }
 
-            var genre = await _context.Genres
+            var auteur = await _context.Auteurs
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (genre == null)
+            if (auteur == null)
             {
                 return NotFound();
             }
 
-            return View(genre);
+            return View(auteur);
         }
 
-        // GET: Genres/Create
+        // GET: Auteurs/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Genres/Create
+        // POST: Auteurs/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Nom,Id")] Genre genre)
+        public async Task<IActionResult> Create([Bind("Nom,Prenom,Date_Naissance,Date_Mort,Id")] Auteur auteur)
         {
-            if (ModelState.IsValid) //verifie que tout les champs required sont remplis 
+            if (ModelState.IsValid)
             {
-                GenreRepository.Insert(genre);
-                GenreRepository.Commit();
+                auteurRepository.Insert(auteur);
+                auteurRepository.Commit();
                 return RedirectToAction(nameof(Index));
             }
-           return View();
+            return View(auteur);
         }
 
-
-        // GET: Genres/Edit/5
-        public async Task<IActionResult> Edit(long id)
+        // GET: Auteurs/Edit/5
+        public async Task<IActionResult> Edit(long? id)
         {
-            var genre = GenreRepository.FindById(id);
-            if (genre == null)
+            if (id == null || _context.Auteurs == null)
             {
                 return NotFound();
             }
-            return View(genre);
+
+            var auteur = await _context.Auteurs.FindAsync(id);
+            if (auteur == null)
+            {
+                return NotFound();
+            }
+            return View(auteur);
         }
 
-        // POST: Genres/Edit/5
+        // POST: Auteurs/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(long id, [Bind("Nom,Id")] Genre genre)
+        public async Task<IActionResult> Edit(long id, [Bind("Nom,Prenom,Date_Naissance,Date_Mort,Id")] Auteur auteur)
         {
-            if (id != genre.Id)
+            if (id != auteur.Id)
             {
                 return NotFound();
             }
@@ -95,12 +99,12 @@ namespace Biblioteque.Controllers
             {
                 try
                 {
-                    GenreRepository.Update(genre);
-                    GenreRepository.Commit();
+                  auteurRepository.Update(auteur);
+                  auteurRepository.Commit();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!GenreExists(genre.Id))
+                    if (!AuteurExists(auteur.Id))
                     {
                         return NotFound();
                     }
@@ -111,49 +115,49 @@ namespace Biblioteque.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(genre);
+            return View(auteur);
         }
 
-        // GET: Genres/Delete/5
+        // GET: Auteurs/Delete/5
         public async Task<IActionResult> Delete(long? id)
         {
-            if (id == null || _context.Genres == null)
+            if (id == null || _context.Auteurs == null)
             {
                 return NotFound();
             }
 
-            var genre = await _context.Genres
+            var auteur = await _context.Auteurs
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (genre == null)
+            if (auteur == null)
             {
                 return NotFound();
             }
 
-            return View(genre);
+            return View(auteur);
         }
 
-        // POST: Genres/Delete/5
+        // POST: Auteurs/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(long id)
         {
-            if (_context.Genres == null)
+            if (_context.Auteurs == null)
             {
-                return Problem("Entity set 'BiblioContext.Genres'  is null.");
+                return Problem("Entity set 'BiblioContext.Auteurs'  is null.");
             }
-            var genre = GenreRepository.FindById(id);
-            if (genre != null)
+            var auteur = auteurRepository.FindById(id);
+            if (auteur != null)
             {
-                GenreRepository.Delete(id);
+                auteurRepository.Delete(id);
             }
 
-            GenreRepository.Commit();
+            auteurRepository.Commit();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool GenreExists(long id)
+        private bool AuteurExists(long id)
         {
-          return _context.Genres.Any(e => e.Id == id);
+          return _context.Auteurs.Any(e => e.Id == id);
         }
     }
 }
