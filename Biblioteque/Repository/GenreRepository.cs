@@ -11,6 +11,11 @@ namespace Biblioteque.Repository
         {
             Context = context;
         }
+
+        internal Task Update(long? id)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
     

@@ -60,10 +60,8 @@ namespace Biblioteque.Controllers
         {
             if (ModelState.IsValid) //verifie que tout les champs required sont remplis 
             {
-                _context.Add(genre);
-                await _context.SaveChangesAsync();
-                //GenreRepository.Insert(genre);
-                //GenreRepository.Commit();
+                GenreRepository.Insert(genre);
+                GenreRepository.Commit();
                 return RedirectToAction(nameof(Index));
             }
            return View();
@@ -71,14 +69,9 @@ namespace Biblioteque.Controllers
 
 
         // GET: Genres/Edit/5
-        public async Task<IActionResult> Edit(long? id)
+        public async Task<IActionResult> Edit(long id)
         {
-            if (id == null || _context.Genres == null)
-            {
-                return NotFound();
-            }
-
-            var genre = await _context.Genres.FindAsync(id);
+            var genre = GenreRepository.FindById(id);
             if (genre == null)
             {
                 return NotFound();
@@ -102,8 +95,8 @@ namespace Biblioteque.Controllers
             {
                 try
                 {
-                    _context.Update(genre);
-                    await _context.SaveChangesAsync();
+                    GenreRepository.Update(genre);
+                    GenreRepository.Commit();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -148,13 +141,13 @@ namespace Biblioteque.Controllers
             {
                 return Problem("Entity set 'BiblioContext.Genres'  is null.");
             }
-            var genre = await _context.Genres.FindAsync(id);
+            var genre = GenreRepository.FindById(id);
             if (genre != null)
             {
-                _context.Genres.Remove(genre);
+                GenreRepository.Delete(id);
             }
-            
-            await _context.SaveChangesAsync();
+
+            GenreRepository.Commit();
             return RedirectToAction(nameof(Index));
         }
 
