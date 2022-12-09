@@ -1,7 +1,19 @@
+using Biblioteque.Repository;
+using NuGet.Protocol.Core.Types;
+using Biblioteque.Models;
+using Microsoft.EntityFrameworkCore;
+
+
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddDbContext<BiblioContext>(); //a permis de solutionner le problème d'injection de dépendances
+
+
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
 
 var app = builder.Build();
 
@@ -13,6 +25,7 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
+
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
@@ -22,6 +35,11 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Home}/{action=Index}/{id?}"
+    );
+app.MapControllerRoute(
+    name: "Genre",
+    pattern: "{controller=Genres}/{action=Index}"
+    );
 
 app.Run();

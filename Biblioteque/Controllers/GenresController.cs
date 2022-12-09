@@ -13,10 +13,12 @@ namespace Biblioteque.Controllers
     public class GenresController : Controller
     {
         private readonly BiblioContext _context;
+        private GenreRepository GenreRepository;
 
         public GenresController(BiblioContext context)
         {
             _context = context;
+            GenreRepository = new GenreRepository(_context);
         }
 
         // GET: Genres
@@ -56,14 +58,17 @@ namespace Biblioteque.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Nom,Id")] Genre genre)
         {
-            if (ModelState.IsValid)
+            if (ModelState.IsValid) //verifie que tout les champs required sont remplis 
             {
                 _context.Add(genre);
                 await _context.SaveChangesAsync();
+                //GenreRepository.Insert(genre);
+                //GenreRepository.Commit();
                 return RedirectToAction(nameof(Index));
             }
-            return View(genre);
+           return View();
         }
+
 
         // GET: Genres/Edit/5
         public async Task<IActionResult> Edit(long? id)

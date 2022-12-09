@@ -13,6 +13,7 @@ namespace Biblioteque.Repository
             builder.AddJsonFile("appsettings.json", optional: false);
             var configuration = builder.Build();
             connectionString = configuration.GetConnectionString("SQLConnection").ToString();
+            
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
