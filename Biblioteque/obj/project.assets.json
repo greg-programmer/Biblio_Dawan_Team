@@ -10442,11 +10442,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\33675\\Source\\Repos\\Biblio_Dawan_Team\\Biblioteque\\Biblioteque.csproj",
+      "projectUniqueName": "C:\\Users\\33675\\source\\repos\\Biblio_Dawan_Team\\Biblioteque\\Biblioteque.csproj",
       "projectName": "Biblioteque",
-      "projectPath": "C:\\Users\\33675\\Source\\Repos\\Biblio_Dawan_Team\\Biblioteque\\Biblioteque.csproj",
+      "projectPath": "C:\\Users\\33675\\source\\repos\\Biblio_Dawan_Team\\Biblioteque\\Biblioteque.csproj",
       "packagesPath": "C:\\Users\\33675\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\33675\\Source\\Repos\\Biblio_Dawan_Team\\Biblioteque\\obj\\",
+      "outputPath": "C:\\Users\\33675\\source\\repos\\Biblio_Dawan_Team\\Biblioteque\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

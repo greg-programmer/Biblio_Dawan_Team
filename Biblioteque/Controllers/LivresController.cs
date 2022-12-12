@@ -7,24 +7,24 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Biblioteque.Models;
 using Biblioteque.Repository;
-using static NuGet.Packaging.PackagingConstants;
 
 namespace Biblioteque.Controllers
 {
     public class LivresController : Controller
     {
         private readonly BiblioContext _context;
+       private readonly LivreRepository _livreRepository;
 
         public LivresController(BiblioContext context)
         {
-            _context = context;
+            _context = context;               
         }
 
         // GET: Livres
         public async Task<IActionResult> Index()
         {
-
-            return View(await _context.Livres.ToListAsync());
+            var r = new LivreRepository(_context);
+            return View(r.FindAll());
         }
 
         // GET: Livres/Details/5

@@ -13,8 +13,10 @@
             Biographie,
             Manga
         }
-        public List<GenreLivre> ?GenreLivres { get; set; }
-        public List<AuteurLivre> ?AuteurLivres { get; set; }
+        public ICollection<Genre> ?Genres { get; set; }
+        public ICollection<Auteur> ?Auteurs { get; set; }
+        /*public List<GenreLivre> ?GenreLivres { get; set; }
+        public List<AuteurLivre> ?AuteurLivres { get; set; }*/
         public Image ?Image { get; set; }
     }
 }

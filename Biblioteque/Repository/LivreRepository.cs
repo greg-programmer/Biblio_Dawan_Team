@@ -14,16 +14,16 @@ namespace Biblioteque.Repository
         public override List<Livre> FindAll()
         {
             return context.Livres
-                .Include("GenreLivre")
-                .Include("AuteurLivre")
+                .Include("Genres")
+                .Include("Auteurs")
                 .Include("Image")
                 .ToList();
         }
         public override Livre FindById(long id)
         {
             return context.Livres
-                .Include("GenreLivre")
-                .Include("AuteurLivre")
+                .Include("Genres")
+                .Include("Auteurs")
                 .Include("Image")
                 .FirstOrDefault(x => x.Id == id);
         }
