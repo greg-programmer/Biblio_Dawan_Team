@@ -9,6 +9,7 @@ namespace Biblioteque.Models
         public string ?Nom { get; set; }
 
         // le "?" permet d'indiquer que le champs peut être null
-        public List<GenreLivre> ?GenreLivres { get; set; }
+        /*public List<GenreLivre> ?GenreLivres { get; set; }*/
+        public ICollection<Livre> Livres { get; set; }
     }
 }

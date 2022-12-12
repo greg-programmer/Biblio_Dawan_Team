@@ -12,6 +12,7 @@ namespace Biblioteque.Models
         public DateTime Date_Naissance { get; set; }
         public DateTime Date_Mort { get; set; }
 
-        public List<AuteurLivre> ?AuteurLivres { get; set; }
+        //public List<AuteurLivre> ?AuteurLivres { get; set; }
+        public ICollection<Livre> Livres { get; set; }
     }
 }

@@ -7,13 +7,14 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddDbContext<BiblioContext>(); //a permis de solutionner le problème d'injection de dépendances
+//builder.Services.AddDbContext<BiblioContext>(); //a permis de solutionner le problème d'injection de dépendances
 
 
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-
+builder.Services.AddDbContext<BiblioContext>(option =>
+option.UseSqlServer(builder.Configuration.GetConnectionString("SQLConnection")));
 
 var app = builder.Build();
 
