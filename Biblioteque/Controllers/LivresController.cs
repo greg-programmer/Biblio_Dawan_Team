@@ -13,25 +13,18 @@ namespace Biblioteque.Controllers
     public class LivresController : Controller
     {
         private readonly BiblioContext _context;
-       // private readonly LivreRepository livreRepository;
+       private readonly LivreRepository _livreRepository;
 
-        public LivresController(BiblioContext context/*, LivreRepository livreRepository*/)
+        public LivresController(BiblioContext context)
         {
-            _context = context;
-           // this.livreRepository = livreRepository;
+            _context = context;               
         }
-
-
 
         // GET: Livres
         public async Task<IActionResult> Index()
         {
-            /* List<Livre> livre = from emp in _context.Livres
-           join dpt in _context.Images on emp.Id equals dpt.Id
-           select new Livre { */       
-            var r=new LivreRepository(_context);
+            var r = new LivreRepository(_context);
             return View(r.FindAll());
-          //  return View(livreRepository.FindAll());
         }
 
         // GET: Livres/Details/5
