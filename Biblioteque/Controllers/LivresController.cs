@@ -23,11 +23,8 @@ namespace Biblioteque.Controllers
         // GET: Livres
         public async Task<IActionResult> Index()
         {
-            var q =
-            from c in _context.Livres
-            join o in _context.Images on c.Id equals o.Id
-            select new { c.Image,c.Titre,c };
-            return View(await q.ToListAsync());
+
+            return View(await _context.Livres.ToListAsync());
         }
 
         // GET: Livres/Details/5

@@ -2,7 +2,71 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">COUCOU</h1>
-    <p>Learn about comment creer des pages help pls.</p>
-</div>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/biblio.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/css.css" asp-append-version="true" />
+    <title>Site de Bibiloteque</title>
+</head>
+<body>
+    <header>
+        <h1 class="mb-0">Book-in</h1>
+    </header>
+
+    <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Rechercher un livre..." aria-label="Search">
+        <button class="btn btn-success" type="submit">Rechercher</button>
+    </form>
+    <section class="container">
+        <main class="row">
+            <aside class="shadow p-3 mb-5 bg-body rounded col-xl-3 col-lg-10 col-md-12 col-sm-12 col-xs-12 row gy-3 gx-3 animation-home">
+                <h3>Last Book</h3>
+                <a class="col-9 col-xl-6 col-md-3 col-sm-3" href="#">
+                    <img class=" img-fluid mr-3 " src="./images/Institut.jpg" />
+                </a>
+                <a class="col-9 col-xl-6 col-md-3 col-sm-3 " href="#">
+                    <img class=" img-fluid mr-3 " src="./images/zola.jpg" />
+                </a>
+                <a class="col-9 col-xl-6 col-md-3 col-sm-3" href="#">
+                    <img class="img-fluid mr-3 " src="./images/death_note.jpg" />
+                </a>
+                <a class="col-9 col-xl-6 col-md-3 col-sm-3" href="#">
+                    <img class="img-fluid mr-3 " src="./images/batman.jpg" />
+                </a>
+            </aside>
+            <article class="2 col-xl-7 col-lg-10 col-md-12 col-sm-12 d-none d-sm-block animation-home">
+                <figure class="col-xl-9 col-md-12 col-sm-12">
+                    <a href="./ficheProduit.html" class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                        <img src="" alt="Couverture livre La Bête humaine">
+                        <div class="containerUlP">
+                            <ul>
+                                <li>Titre : La Bête humaine</li>
+                                <li>Auteur : Emile Zola</li>
+                                <li>Date de parution : 1890</li>
+                                <li>Genre : Roman/Fiction</li>
+                                <p>
+                                    Résumé :
+                                    Roubaud, sous-chef de gare au Havre, employé modèle, mais ayant été injustement
+                                    l'objet d'une plainte d'un usager, est monté à Paris pour se justifier.
+                                    Sa femme Séverine en a profité pour l'accompagner et faire quelques emplettes...
+                                </p>
+                            </ul>
+                        </div>
+                    </a>
+                </figure>
+            </article>
+            <aside class="shadow p-3 mb-5 bg-body rounded col-xl-2 col-lg-10 col-md-12 col-sm-12 col-xs-12 row gy-3 gx-3 animation-home">
+                <h3>Popular Book</h3>
+                <a class="col-9 col-xl-12 col-md-3 col-sm-3" href="#">
+                    <img class="img-fluid mr-3 " src="./images/harry.jpg" />
+                </a>
+            </aside>
+        </main>
+    </section>
+    
+</body>
+</html>
