@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "QFKVJnGcyZdY5ylB3yZBIBNDoqg9QcVk1BhAs/ZY2us=",
+  "Hash": "35t71oThniACq5ugOy1alMIRrajfs/Yzdm8y1UxX5iA=",
   "Source": "Biblioteque",
   "BasePath": "_content/Biblioteque",
   "Mode": "Default",
@@ -1086,6 +1086,57 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\33675\\source\\repos\\Biblio_Dawan_Team\\Biblioteque\\wwwroot\\Upload\\batman223829874.jpg",
+      "SourceId": "Biblioteque",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\33675\\source\\repos\\Biblio_Dawan_Team\\Biblioteque\\wwwroot\\",
+      "BasePath": "_content/Biblioteque",
+      "RelativePath": "Upload/batman223829874.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Upload\\batman223829874.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\33675\\source\\repos\\Biblio_Dawan_Team\\Biblioteque\\wwwroot\\Upload\\death_note224323404.jpg",
+      "SourceId": "Biblioteque",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\33675\\source\\repos\\Biblio_Dawan_Team\\Biblioteque\\wwwroot\\",
+      "BasePath": "_content/Biblioteque",
+      "RelativePath": "Upload/death_note224323404.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Upload\\death_note224323404.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\33675\\source\\repos\\Biblio_Dawan_Team\\Biblioteque\\wwwroot\\Upload\\harry221219625.jpg",
+      "SourceId": "Biblioteque",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\33675\\source\\repos\\Biblio_Dawan_Team\\Biblioteque\\wwwroot\\",
+      "BasePath": "_content/Biblioteque",
+      "RelativePath": "Upload/harry221219625.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Upload\\harry221219625.jpg"
     }
   ]
 }
