@@ -44,7 +44,7 @@ footer > ul > li > a {
     color: white;    
 }
 footer > ul > li > a:hover {
-    color: white;
+    color: black;
 }
 article {
     display: flex;

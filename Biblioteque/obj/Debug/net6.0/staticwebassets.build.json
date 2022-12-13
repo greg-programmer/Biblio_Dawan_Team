@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "35t71oThniACq5ugOy1alMIRrajfs/Yzdm8y1UxX5iA=",
+  "Hash": "+PUFQIOLRNbiY8E9JQFAf5rizoQmVel+oi1a+2mCLXk=",
   "Source": "Biblioteque",
   "BasePath": "_content/Biblioteque",
   "Mode": "Default",
@@ -1105,6 +1105,23 @@
       "OriginalItemSpec": "wwwroot\\Upload\\batman223829874.jpg"
     },
     {
+      "Identity": "C:\\Users\\33675\\source\\repos\\Biblio_Dawan_Team\\Biblioteque\\wwwroot\\Upload\\death_note220515449.jpg",
+      "SourceId": "Biblioteque",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\33675\\source\\repos\\Biblio_Dawan_Team\\Biblioteque\\wwwroot\\",
+      "BasePath": "_content/Biblioteque",
+      "RelativePath": "Upload/death_note220515449.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Upload\\death_note220515449.jpg"
+    },
+    {
       "Identity": "C:\\Users\\33675\\source\\repos\\Biblio_Dawan_Team\\Biblioteque\\wwwroot\\Upload\\death_note224323404.jpg",
       "SourceId": "Biblioteque",
       "SourceType": "Discovered",
@@ -1137,6 +1154,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Upload\\harry221219625.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\33675\\source\\repos\\Biblio_Dawan_Team\\Biblioteque\\wwwroot\\Upload\\Institut220502839.jpg",
+      "SourceId": "Biblioteque",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\33675\\source\\repos\\Biblio_Dawan_Team\\Biblioteque\\wwwroot\\",
+      "BasePath": "_content/Biblioteque",
+      "RelativePath": "Upload/Institut220502839.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Upload\\Institut220502839.jpg"
     }
   ]
 }
