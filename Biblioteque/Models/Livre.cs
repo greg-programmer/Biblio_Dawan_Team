@@ -1,10 +1,13 @@
-﻿namespace Biblioteque.Models
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace Biblioteque.Models
 {
     public class Livre : AbstractEntity
     {
         public string ?Titre { get; set; }
-        public DateTime Date_Parution { get; set; }
+        public DateTime ?Date_Parution { get; set; }
         public string ?Synopsis { get; set; }
+
         public enum Type_Livre 
         {
             Bande_dessine,
@@ -13,10 +16,14 @@
             Biographie,
             Manga
         }
+
+        [NotMapped]
+        public IFormFile ?Image { get; set; }
+
+        public string ?CheminImage { get; set; }
         public ICollection<Genre> ?Genres { get; set; }
         public ICollection<Auteur> ?Auteurs { get; set; }
-        /*public List<GenreLivre> ?GenreLivres { get; set; }
-        public List<AuteurLivre> ?AuteurLivres { get; set; }*/
-        public Image ?Image { get; set; }
+
+        
     }
 }

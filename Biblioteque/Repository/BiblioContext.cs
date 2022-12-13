@@ -40,7 +40,7 @@ namespace Biblioteque.Repository
         public DbSet<Livre> Livres { get; set; }
         public DbSet<Auteur> Auteurs { get; set; }
         public DbSet<Genre> Genres { get; set; }
-        public DbSet<Image> Images { get; set; }
+        
         //public DbSet<GenreLivre> GenreLivres { get; set; }
         //public DbSet<AuteurLivre> AuteurLivres { get; set; }
     }

@@ -7,27 +7,30 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Biblioteque.Models;
 using Biblioteque.Repository;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.Extensions.Hosting;
+using System.Drawing;
 
 namespace Biblioteque.Controllers
 {
     public class LivresController : Controller
     {
         private readonly BiblioContext _context;
-       private readonly LivreRepository _livreRepository;
+        private readonly IHostEnvironment _environment;
 
-        public LivresController(BiblioContext context)
+        public LivresController(BiblioContext context, IHostEnvironment environment)
         {
-            _context = context;               
+            _context = context;
+            _environment = environment;
         }
 
-        // GET: Livres
+        // GET: Livres1
         public async Task<IActionResult> Index()
         {
-            var r = new LivreRepository(_context);
-            return View(r.FindAll());
+              return View(await _context.Livres.ToListAsync());
         }
 
-        // GET: Livres/Details/5
+        // GET: Livres1/Details/5
         public async Task<IActionResult> Details(long? id)
         {
             if (id == null || _context.Livres == null)
@@ -45,29 +48,44 @@ namespace Biblioteque.Controllers
             return View(livre);
         }
 
-        // GET: Livres/Create
+        // GET: Livres1/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Livres/Create
+        // POST: Livres1/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Titre,Date_Parution,Synopsis,Id")] Livre livre)
+        public async Task<IActionResult> Create([Bind("Titre,Date_Parution,Synopsis,Id,Image,CheminImage")] Livre livre)
         {
             if (ModelState.IsValid)
             {
+                //Save image to wwwroot/image
+                // string wwwRootPath = _environment.ContentRootPath;
+                string wwwRootPath = Environment.CurrentDirectory;
+                string fileName = Path.GetFileNameWithoutExtension(path: livre.Image.FileName);
+                string extension = Path.GetExtension(livre.Image.FileName);
+                livre.CheminImage = fileName = fileName + DateTime.Now.ToString("yymmssfff") + extension;
+                string path = Path.Combine(wwwRootPath, "wwwroot", "Upload", fileName);
+                Console.WriteLine(path);
+                using (var fileStream = new FileStream(path, FileMode.Create))
+                {
+                    await livre.Image.CopyToAsync(fileStream);
+                }
+                //Insert record
                 _context.Add(livre);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
             return View(livre);
+
+            
         }
 
-        // GET: Livres/Edit/5
+        // GET: Livres1/Edit/5
         public async Task<IActionResult> Edit(long? id)
         {
             if (id == null || _context.Livres == null)
@@ -83,12 +101,12 @@ namespace Biblioteque.Controllers
             return View(livre);
         }
 
-        // POST: Livres/Edit/5
+        // POST: Livres1/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(long id, [Bind("Titre,Date_Parution,Synopsis,Id")] Livre livre)
+        public async Task<IActionResult> Edit(long id, [Bind("Titre,Date_Parution,Synopsis,CheminImage,Id")] Livre livre)
         {
             if (id != livre.Id)
             {
@@ -118,7 +136,7 @@ namespace Biblioteque.Controllers
             return View(livre);
         }
 
-        // GET: Livres/Delete/5
+        // GET: Livres1/Delete/5
         public async Task<IActionResult> Delete(long? id)
         {
             if (id == null || _context.Livres == null)
@@ -136,7 +154,7 @@ namespace Biblioteque.Controllers
             return View(livre);
         }
 
-        // POST: Livres/Delete/5
+        // POST: Livres1/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(long id)
