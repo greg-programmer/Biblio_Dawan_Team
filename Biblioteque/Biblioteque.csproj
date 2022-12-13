@@ -17,6 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Views\Footer\" />
     <Folder Include="wwwroot\Upload\" />
   </ItemGroup>
 
