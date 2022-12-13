@@ -1,5 +1,6 @@
 ﻿using Biblioteque.Models;
 using Microsoft.EntityFrameworkCore;
+using System.Drawing;
 
 namespace Biblioteque.Repository
 {
@@ -49,5 +50,7 @@ namespace Biblioteque.Repository
             dbSet.Attach(entity);
             context.Entry(entity).State = EntityState.Modified;
         }
+
+       
     }
 }

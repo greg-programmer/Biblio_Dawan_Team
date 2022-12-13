@@ -22,6 +22,8 @@ namespace Biblioteque.Controllers
         }
 
         // GET: Auteurs
+
+
         public async Task<IActionResult> Index()
         {
               return View(auteurRepository.FindAll());

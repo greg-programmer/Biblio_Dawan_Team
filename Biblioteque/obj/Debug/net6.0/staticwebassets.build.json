@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "+PUFQIOLRNbiY8E9JQFAf5rizoQmVel+oi1a+2mCLXk=",
+  "Hash": "VWtyvHaj3kVlDIlC2HH9PCrfdRqSUatwiKb3+lSKdAY=",
   "Source": "Biblioteque",
   "BasePath": "_content/Biblioteque",
   "Mode": "Default",
@@ -1139,6 +1139,23 @@
       "OriginalItemSpec": "wwwroot\\Upload\\death_note224323404.jpg"
     },
     {
+      "Identity": "C:\\Users\\33675\\source\\repos\\Biblio_Dawan_Team\\Biblioteque\\wwwroot\\Upload\\gettyimages-670875519-612x612224412419.jpg",
+      "SourceId": "Biblioteque",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\33675\\source\\repos\\Biblio_Dawan_Team\\Biblioteque\\wwwroot\\",
+      "BasePath": "_content/Biblioteque",
+      "RelativePath": "Upload/gettyimages-670875519-612x612224412419.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Upload\\gettyimages-670875519-612x612224412419.jpg"
+    },
+    {
       "Identity": "C:\\Users\\33675\\source\\repos\\Biblio_Dawan_Team\\Biblioteque\\wwwroot\\Upload\\harry221219625.jpg",
       "SourceId": "Biblioteque",
       "SourceType": "Discovered",
@@ -1171,6 +1188,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Upload\\Institut220502839.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\33675\\source\\repos\\Biblio_Dawan_Team\\Biblioteque\\wwwroot\\Upload\\istockphoto-870213920-612x612222626115.jpg",
+      "SourceId": "Biblioteque",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\33675\\source\\repos\\Biblio_Dawan_Team\\Biblioteque\\wwwroot\\",
+      "BasePath": "_content/Biblioteque",
+      "RelativePath": "Upload/istockphoto-870213920-612x612222626115.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Upload\\istockphoto-870213920-612x612222626115.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\33675\\source\\repos\\Biblio_Dawan_Team\\Biblioteque\\wwwroot\\Upload\\zola220425935.jpg",
+      "SourceId": "Biblioteque",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\33675\\source\\repos\\Biblio_Dawan_Team\\Biblioteque\\wwwroot\\",
+      "BasePath": "_content/Biblioteque",
+      "RelativePath": "Upload/zola220425935.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Upload\\zola220425935.jpg"
     }
   ]
 }

@@ -1,5 +1,8 @@
 ﻿using Biblioteque.Models;
+using Biblioteque.Repository;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 using System.Diagnostics;
 
 namespace Biblioteque.Controllers
@@ -7,15 +10,21 @@ namespace Biblioteque.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly LivreRepository _livreRepository;
 
-        public HomeController(ILogger<HomeController> logger)
+        private readonly BiblioContext _context;
+
+        public HomeController(ILogger<HomeController> logger, BiblioContext context)
         {
             _logger = logger;
+            _livreRepository = new LivreRepository(context);
+            _context = context;
         }
+
 
         public IActionResult Index()
         {
-            return View();
+            return View(  _livreRepository.FindAllReverse4());
         }
 
         public IActionResult Apropos()

@@ -11,6 +11,16 @@ namespace Biblioteque.Repository
         {
             Context = context;
         }
+
+
+        public List<Livre> FindAllReverse4()
+        {
+            return context.Livres
+                .OrderByDescending(livre => livre.Id)
+                .Include("Genres")
+                .Include("Auteurs")
+                .ToList();
+        }
         public override List<Livre> FindAll()
         {
             return context.Livres
