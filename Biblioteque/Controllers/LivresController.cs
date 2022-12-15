@@ -10,6 +10,7 @@ using Biblioteque.Repository;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Hosting;
 using System.Drawing;
+using Microsoft.AspNetCore.Http;
 
 namespace Biblioteque.Controllers
 {
@@ -72,7 +73,7 @@ namespace Biblioteque.Controllers
                 string extension = Path.GetExtension(livre.Image.FileName);
                 livre.CheminImage = fileName = fileName + DateTime.Now.ToString("yymmssfff") + extension;
                 string path = Path.Combine(wwwRootPath, "wwwroot", "Upload", fileName);
-                Console.WriteLine(path);
+                
                 using (var fileStream = new FileStream(path, FileMode.Create))
                 {
                     await livre.Image.CopyToAsync(fileStream);
@@ -108,7 +109,7 @@ namespace Biblioteque.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(long id, [Bind("Titre,Date_Parution,Synopsis,CheminImage,Id")] Livre livre)
+        public async Task<IActionResult> Edit(long id, [Bind("Titre,Date_Parution,Synopsis,Id,Image,CheminImage")] Livre livre)
         {
             if (id != livre.Id)
             {
@@ -117,10 +118,23 @@ namespace Biblioteque.Controllers
 
             if (ModelState.IsValid)
             {
+
+                string wwwRootPath = Environment.CurrentDirectory;
+                string fileName = Path.GetFileNameWithoutExtension(path: livre.Image.FileName);
+                string extension = Path.GetExtension(livre.Image.FileName);
+                livre.CheminImage = fileName = fileName + DateTime.Now.ToString("yymmssfff") + extension;
+                string path = Path.Combine(wwwRootPath, "wwwroot", "Upload", fileName);
+
+                using (var fileStream = new FileStream(path, FileMode.Create))
+                {
+                    await livre.Image.CopyToAsync(fileStream);
+                }
+
+
                 try
                 {
                     _context.Update(livre);
-                    await _context.SaveChangesAsync();
+                    _context.SaveChanges();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -166,11 +180,14 @@ namespace Biblioteque.Controllers
                 return Problem("Entity set 'BiblioContext.Livres'  is null.");
             }
             var livre = await _context.Livres.FindAsync(id);
-            if (livre != null)
+            if (livre != null & livre.CheminImage != null)
             {
-                _context.Livres.Remove(livre);
+                string wwwRootPath = Environment.CurrentDirectory;
+                string path = Path.Combine(wwwRootPath,"wwwroot","Upload", livre.CheminImage);
+
+                System.IO.File.Delete(path);    
             }
-            
+            _context.Livres.Remove(livre);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
@@ -178,6 +195,25 @@ namespace Biblioteque.Controllers
         private bool LivreExists(long id)
         {
           return _context.Livres.Any(e => e.Id == id);
+        }
+
+        [Route("Livres/Search")]
+        public async Task<IActionResult> Search(string id)
+        {
+            if (_context.Livres == null)
+            {
+                return Problem("Entity set 'BibliContext.livres'  is null.");
+            }
+
+            var livres = from l in _context.Livres
+                         select l;
+
+            if (!String.IsNullOrEmpty(id))
+            {
+                livres = livres.Where(l => l.Titre.Contains(id));
+            }
+
+            return View(await livres.ToListAsync());
         }
     }
 }

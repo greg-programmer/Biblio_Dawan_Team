@@ -26,5 +26,9 @@ figure {
   .resume:hover {
 opacity: 1;
   }
-  
 
+figure > a {
+    display: flex;
+    text-decoration: none;
+    color: black;
+}

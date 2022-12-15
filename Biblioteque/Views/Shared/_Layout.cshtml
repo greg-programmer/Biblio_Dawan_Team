@@ -35,9 +35,9 @@
         </nav>
 
     </header>
-    <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Rechercher un livre..." aria-label="Search">
-        <button class="btn btn-success" type="submit">Rechercher</button>
+    <form asp-controller="Livres" asp-action="Search"  method="get" class="d-flex">
+        <input class="form-control me-2" type="text" placeholder="Rechercher un livre..." aria-label="Search" name="id">
+        <button  class="btn btn-success" type="submit">Rechercher</button>
     </form>
     <div class="container">
         <main role="main" class="pb-3">
