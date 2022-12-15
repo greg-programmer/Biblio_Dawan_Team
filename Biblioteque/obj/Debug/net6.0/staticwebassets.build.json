@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "NKBqI1JCWZmPD1N7PASWogXZPodZUxEtrs1ZHqk69yQ=",
+  "Hash": "ijMIEkw88QS/PSeJjS5F8+6nGz3NTfJaXYzC0GGyk/w=",
   "Source": "Biblioteque",
   "BasePath": "_content/Biblioteque",
   "Mode": "Default",
@@ -1088,6 +1088,40 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
+      "Identity": "C:\\Users\\33675\\source\\repos\\Biblio_Dawan_Team\\Biblioteque\\wwwroot\\Upload\\512MGB0Q12L._SX329_BO1,204,203,200_222426803.jpg",
+      "SourceId": "Biblioteque",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\33675\\source\\repos\\Biblio_Dawan_Team\\Biblioteque\\wwwroot\\",
+      "BasePath": "_content/Biblioteque",
+      "RelativePath": "Upload/512MGB0Q12L._SX329_BO1,204,203,200_222426803.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Upload\\512MGB0Q12L._SX329_BO1,204,203,200_222426803.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\33675\\source\\repos\\Biblio_Dawan_Team\\Biblioteque\\wwwroot\\Upload\\77_9782203001022_1_75221655060.jpg",
+      "SourceId": "Biblioteque",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\33675\\source\\repos\\Biblio_Dawan_Team\\Biblioteque\\wwwroot\\",
+      "BasePath": "_content/Biblioteque",
+      "RelativePath": "Upload/77_9782203001022_1_75221655060.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Upload\\77_9782203001022_1_75221655060.jpg"
+    },
+    {
       "Identity": "C:\\Users\\33675\\source\\repos\\Biblio_Dawan_Team\\Biblioteque\\wwwroot\\Upload\\batman223829874.jpg",
       "SourceId": "Biblioteque",
       "SourceType": "Discovered",
@@ -1207,6 +1241,23 @@
       "OriginalItemSpec": "wwwroot\\Upload\\death_note225204181.jpg"
     },
     {
+      "Identity": "C:\\Users\\33675\\source\\repos\\Biblio_Dawan_Team\\Biblioteque\\wwwroot\\Upload\\harry220508463.jpg",
+      "SourceId": "Biblioteque",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\33675\\source\\repos\\Biblio_Dawan_Team\\Biblioteque\\wwwroot\\",
+      "BasePath": "_content/Biblioteque",
+      "RelativePath": "Upload/harry220508463.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Upload\\harry220508463.jpg"
+    },
+    {
       "Identity": "C:\\Users\\33675\\source\\repos\\Biblio_Dawan_Team\\Biblioteque\\wwwroot\\Upload\\harry221219625.jpg",
       "SourceId": "Biblioteque",
       "SourceType": "Discovered",
@@ -1324,6 +1375,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Upload\\Institut225641395.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\33675\\source\\repos\\Biblio_Dawan_Team\\Biblioteque\\wwwroot\\Upload\\La-Belle-et-la-Bete221002499.jpg",
+      "SourceId": "Biblioteque",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\33675\\source\\repos\\Biblio_Dawan_Team\\Biblioteque\\wwwroot\\",
+      "BasePath": "_content/Biblioteque",
+      "RelativePath": "Upload/La-Belle-et-la-Bete221002499.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Upload\\La-Belle-et-la-Bete221002499.jpg"
     },
     {
       "Identity": "C:\\Users\\33675\\source\\repos\\Biblio_Dawan_Team\\Biblioteque\\wwwroot\\Upload\\zola223720685.jpg",

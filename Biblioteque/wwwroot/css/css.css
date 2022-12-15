@@ -50,7 +50,8 @@ article {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: auto;
+    height: fit-content;
+
           
 }
 article > figure {
@@ -85,13 +86,14 @@ figure > img{
     border-right: none;
 }
 
-.truncate {
-  
-    word-break: break-word;
-}
-
 .animation-home:hover {
     transform : scale(1.1);
-    transition-duration : 200ms;
+    transition-duration : 300ms;
+    
 }
 
+.blockaccueil {
+  height: 170px;
+  overflow:hidden;
+  
+}
