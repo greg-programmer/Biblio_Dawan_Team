@@ -51,12 +51,13 @@ namespace Biblioteque.Migrations
                     b.Property<DateTime>("Date_Naissance")
                         .HasColumnType("datetime2");
 
+                    b.Property<long>("LivreId")
+                        .HasColumnType("bigint");
+
                     b.Property<string>("Nom")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Prenom")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -71,6 +72,9 @@ namespace Biblioteque.Migrations
                         .HasColumnType("bigint");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+
+                    b.Property<long>("LivreId")
+                        .HasColumnType("bigint");
 
                     b.Property<string>("Nom")
                         .IsRequired()
@@ -90,10 +94,12 @@ namespace Biblioteque.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
 
                     b.Property<string>("CheminImage")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("Date_Parution")
+                    b.Property<bool>("CoupDeCoeur")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("Date_Parution")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Synopsis")

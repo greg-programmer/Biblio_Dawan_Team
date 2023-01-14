@@ -22,10 +22,10 @@ namespace Biblioteque.Controllers
         }
 
         // GET: Auteurs
-        public async Task<IActionResult> Index()
-        {
-              return View(auteurRepository.FindAll());
-        }
+        //public async Task<IActionResult> Index()
+        //{
+        //      return View(auteurRepository.FindAll());
+        //}
 
         // GET: Auteurs/Details/5
         public async Task<IActionResult> Details(long? id)
@@ -54,18 +54,18 @@ namespace Biblioteque.Controllers
         // POST: Auteurs/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Nom,Prenom,Date_Naissance,Date_Mort,Id")] Auteur auteur)
-        {
-            if (ModelState.IsValid)
-            {
-                auteurRepository.Insert(auteur);
-                auteurRepository.Commit();
-                return RedirectToAction(nameof(Index));
-            }
-            return View(auteur);
-        }
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public async Task<IActionResult> Create([Bind("Nom,Prenom,Date_Naissance,Date_Mort,Id")] Auteur auteur)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        auteurRepository.Insert(auteur);
+        //        auteurRepository.Commit();
+        //        return RedirectToAction(nameof(Index));
+        //    }
+        //    return View(auteur);
+        //}
 
         // GET: Auteurs/Edit/5
         public async Task<IActionResult> Edit(long? id)
