@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ﻿@model Biblioteque.Models.ViewModel
+=======
+﻿@model List<Livre>
+>>>>>>> c9e229e602811744bac6ab818b33cfafad51d15e
 @{
     ViewData["Title"] = "Home Page";
 }
@@ -14,18 +18,13 @@
     <title>Site de Bibiloteque</title>
 </head>
 <body>
-    <header>
-        <h1 class="mb-0">Book-in</h1>
-    </header>
 
-    <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Rechercher un livre..." aria-label="Search">
-        <button class="btn btn-success" type="submit">Rechercher</button>
-    </form>
     <section class="container">
         <main class="row">
-            <aside class="shadow p-3 mb-5 bg-body rounded col-xl-3 col-lg-10 col-md-12 col-sm-12 col-xs-12 row gy-3 gx-3 animation-home">
+
+            <aside class="shadow p-3 mb-5 bg-body rounded col-xl-3 col-lg-10 col-md-12 col-sm-12 col-xs-12 row gy-3 gx-3">
                 <h3>Last Book</h3>
+<<<<<<< HEAD
 
 
                 @for (var i = 0; i < Model.LivreViewM.Count; i++){
@@ -38,6 +37,61 @@
                         break;
                     }                      
                 }             
+=======
+                @for (int i = 0; i < 4; i++)
+                {
+                    <a class="col-9 col-xl-6 col-md-3 col-sm-3 animation-home" asp-controller="Livres" asp-action="Details" asp-route-id="@Model[i].Id">
+                        <img class=" img-fluid mr-3 " src="~/Upload/@Html.DisplayFor(modelitem => Model[i].CheminImage)" alt="Couverture de Livres" />
+                    </a>
+
+                }
+
+            </aside>
+
+
+
+
+
+            <article class="2 col-xl-7 col-lg-10 col-md-12 col-sm-12 d-none d-sm-block ">
+                <figure class="col-xl-9 col-md-12 col-sm-12">
+                    <div class=" col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                        <img src="~/Upload/@Html.DisplayFor(modelitem => Model[0].CheminImage)">
+                        <div class="containerUlP ">
+                            <ul>
+                                <li>Titre :  @Html.DisplayFor(modelitem => Model[0].Titre) </li>
+                                
+                                <li>Date de parution : @Html.DisplayFor(modelitem => Model[0].Date_Parution)</li>
+                               
+                                 <li>
+                                    <p class="blockaccueil">
+                                    @Html.DisplayFor(modelitem => Model[0].Synopsis)
+                                    </p>
+                                </li>
+                                <li><a asp-controller="Livres" asp-action="Details" asp-route-id="@Model[0].Id">
+                                        <button> Afficher détails du livre</button>
+                                    </a>
+                                </li>
+
+                            </ul> 
+                        </div>
+                       
+                    </div>
+                </figure>
+            </article>
+            <aside class="shadow p-3 mb-5 bg-body rounded col-xl-2 col-lg-10 col-md-12 col-sm-12 col-xs-12 row gy-3 gx-3 animation-home">
+                <h3>Le coup de coeur</h3>
+                @foreach(var livre in Model)
+                {
+                   if(livre.Id == 27)
+                   {
+                        <a class="col-9 col-xl-12 col-md-3 col-sm-3" asp-controller="Livres" asp-action="Details" asp-route-id="27">
+                            <img class="img-fluid" src="~/Upload/@Html.DisplayFor(modelitem => livre.CheminImage)">
+                        </a>
+
+                   }
+                }
+                
+>>>>>>> c9e229e602811744bac6ab818b33cfafad51d15e
             </aside>
          
                 <article class="2 col-xl-7 col-lg-10 col-md-12 col-sm-12 d-none d-sm-block animation-home">
@@ -73,6 +127,6 @@
             }          
         </main>
     </section>
-    
+
 </body>
 </html>

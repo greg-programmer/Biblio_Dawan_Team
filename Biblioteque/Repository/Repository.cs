@@ -1,6 +1,7 @@
 ﻿using Biblioteque.Migrations;
 using Biblioteque.Models;
 using Microsoft.EntityFrameworkCore;
+using System.Drawing;
 
 namespace Biblioteque.Repository
 {
@@ -70,6 +71,7 @@ namespace Biblioteque.Repository
             context.Entry(entity).State = EntityState.Modified;
         }
 
+<<<<<<< HEAD
         public virtual void DeleteImage(string path)
         {
             string wwwRootPath = Environment.CurrentDirectory;
@@ -78,5 +80,8 @@ namespace Biblioteque.Repository
             if (path != notCover)
                 File.Delete(pathCombine);
         }
+=======
+       
+>>>>>>> c9e229e602811744bac6ab818b33cfafad51d15e
     }
 }

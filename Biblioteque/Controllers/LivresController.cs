@@ -10,6 +10,7 @@ using Biblioteque.Repository;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Hosting;
 using System.Drawing;
+<<<<<<< HEAD
 using System.Collections.Immutable;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using NuGet.Packaging.Signing;
@@ -18,6 +19,9 @@ using NuGet.ContentModel;
 using Microsoft.AspNetCore.Components.Forms;
 using Biblioteque.Services;
 using Microsoft.DotNet.Scaffolding.Shared.Messaging;
+=======
+using Microsoft.AspNetCore.Http;
+>>>>>>> c9e229e602811744bac6ab818b33cfafad51d15e
 
 namespace Biblioteque.Controllers
 {
@@ -48,6 +52,8 @@ namespace Biblioteque.Controllers
             _genreRepository = new GenreRepository(context);
             livreServices = new LivreServices(context);
         }
+
+        
 
         // GET: Livres1
         public async Task<IActionResult> Index()        {
@@ -106,11 +112,27 @@ namespace Biblioteque.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+<<<<<<< HEAD
         public async Task<IActionResult> Create(ViewModel viewModel,bool heart)
         {           
                 try
                 {
                 if (viewModel.LivreViewM_Nolist.Image.Length > 1000)
+=======
+        public async Task<IActionResult> Create([Bind("Titre,Date_Parution,Synopsis,Id,Image,CheminImage")] Livre livre)
+        {
+            if (ModelState.IsValid)
+            {
+                //Save image to wwwroot/image
+                // string wwwRootPath = _environment.ContentRootPath;
+                string wwwRootPath = Environment.CurrentDirectory;
+                string fileName = Path.GetFileNameWithoutExtension(path: livre.Image.FileName);
+                string extension = Path.GetExtension(livre.Image.FileName);
+                livre.CheminImage = fileName = fileName + DateTime.Now.ToString("yymmssfff") + extension;
+                string path = Path.Combine(wwwRootPath, "wwwroot", "Upload", fileName);
+                
+                using (var fileStream = new FileStream(path, FileMode.Create))
+>>>>>>> c9e229e602811744bac6ab818b33cfafad51d15e
                 {
 
                     return RedirectToAction(nameof(MaxFile));    
@@ -186,8 +208,12 @@ namespace Biblioteque.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+<<<<<<< HEAD
         public async Task<IActionResult> Edit(long id, ViewModel viewModel, bool heart)
         
+=======
+        public async Task<IActionResult> Edit(long id, [Bind("Titre,Date_Parution,Synopsis,Id,Image,CheminImage")] Livre livre)
+>>>>>>> c9e229e602811744bac6ab818b33cfafad51d15e
         {
             var livre = _livreRepository.FindById(id);
             var auteur = _auteurRepository.FindById(id);
@@ -200,6 +226,7 @@ namespace Biblioteque.Controllers
                 return NotFound();
             }
 
+<<<<<<< HEAD
          
             
                 try
@@ -207,6 +234,31 @@ namespace Biblioteque.Controllers
                     _livreRepository.GetFilesPath(viewModel);
                     //Appel de la méthode GetfilesPath() pour récuperer le chemin du nouveau fichier 
                    if (viewModel.LivreViewM_Nolist.CheminImage != null)
+=======
+            if (ModelState.IsValid)
+            {
+
+                string wwwRootPath = Environment.CurrentDirectory;
+                string fileName = Path.GetFileNameWithoutExtension(path: livre.Image.FileName);
+                string extension = Path.GetExtension(livre.Image.FileName);
+                livre.CheminImage = fileName = fileName + DateTime.Now.ToString("yymmssfff") + extension;
+                string path = Path.Combine(wwwRootPath, "wwwroot", "Upload", fileName);
+
+                using (var fileStream = new FileStream(path, FileMode.Create))
+                {
+                    await livre.Image.CopyToAsync(fileStream);
+                }
+
+
+                try
+                {
+                    _context.Update(livre);
+                    _context.SaveChanges();
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!LivreExists(livre.Id))
+>>>>>>> c9e229e602811744bac6ab818b33cfafad51d15e
                     {
                         _livreRepository.DeleteImage(livre.CheminImage);
                     }
@@ -317,6 +369,7 @@ namespace Biblioteque.Controllers
             {
                 return Problem("Le livre n'existe pas!");
             }
+<<<<<<< HEAD
             var livre = _livreRepository.FindById(id);
             var auteur = _auteurRepository.FindById(id);
             var genre = _genreRepository.FindById(id);
@@ -332,6 +385,17 @@ namespace Biblioteque.Controllers
             _context.Genres.Remove(genre);
             //_context.Genres.Remove(genre);
 
+=======
+            var livre = await _context.Livres.FindAsync(id);
+            if (livre != null & livre.CheminImage != null)
+            {
+                string wwwRootPath = Environment.CurrentDirectory;
+                string path = Path.Combine(wwwRootPath,"wwwroot","Upload", livre.CheminImage);
+
+                System.IO.File.Delete(path);    
+            }
+            _context.Livres.Remove(livre);
+>>>>>>> c9e229e602811744bac6ab818b33cfafad51d15e
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
@@ -339,6 +403,25 @@ namespace Biblioteque.Controllers
         private bool LivreExists(long id)
         {
           return _context.Livres.Any(e => e.Id == id);
+        }
+
+        [Route("Livres/Search")]
+        public async Task<IActionResult> Search(string id)
+        {
+            if (_context.Livres == null)
+            {
+                return Problem("Entity set 'BibliContext.livres'  is null.");
+            }
+
+            var livres = from l in _context.Livres
+                         select l;
+
+            if (!String.IsNullOrEmpty(id))
+            {
+                livres = livres.Where(l => l.Titre.Contains(id));
+            }
+
+            return View(await livres.ToListAsync());
         }
     }
 }

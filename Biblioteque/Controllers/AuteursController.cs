@@ -22,10 +22,19 @@ namespace Biblioteque.Controllers
         }
 
         // GET: Auteurs
+<<<<<<< HEAD
         //public async Task<IActionResult> Index()
         //{
         //      return View(auteurRepository.FindAll());
         //}
+=======
+
+
+        public async Task<IActionResult> Index()
+        {
+              return View(auteurRepository.FindAll());
+        }
+>>>>>>> c9e229e602811744bac6ab818b33cfafad51d15e
 
         // GET: Auteurs/Details/5
         public async Task<IActionResult> Details(long? id)

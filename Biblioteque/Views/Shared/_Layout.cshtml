@@ -11,6 +11,9 @@
 </head>
 <body>
     <header>
+       
+            <h1>Book-in</h1>
+      
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
@@ -30,13 +33,18 @@
                 </div>
             </div>
         </nav>
+
     </header>
+    <form asp-controller="Livres" asp-action="Search"  method="get" class="d-flex">
+        <input class="form-control me-2" type="text" placeholder="Rechercher un livre..." aria-label="Search" name="id">
+        <button  class="btn btn-success" type="submit">Rechercher</button>
+    </form>
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
-    <footer class="mb-0">
+    <footer >
         <ul class="col-12">
             <li>
                 <a href="#">A propos</a>

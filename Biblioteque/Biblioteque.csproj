@@ -13,10 +13,15 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+<<<<<<< HEAD
+=======
+    <PackageReference Include="Microsoft.OData.Edm" Version="7.13.0" />
+>>>>>>> c9e229e602811744bac6ab818b33cfafad51d15e
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.11" />
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Views\Footer\" />
     <Folder Include="wwwroot\Upload\" />
   </ItemGroup>
 

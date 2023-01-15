@@ -1,0 +1,64 @@
+﻿@model IEnumerable<Biblioteque.Models.Livre>
+
+@{
+    ViewData["Title"] = "Search";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Search</title>
+</head>
+<body>
+  
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Image)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Titre)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Date_Parution)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Synopsis)
+                </th>
+            
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        <img class="img-fluid" src="~/Upload/@Html.DisplayFor(modelitem => item.CheminImage)" alt="Couverture de Livres" />
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Titre)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Date_Parution)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Synopsis)
+                    </td>
+                  
+
+                    <td>
+                     
+                        <a asp-action="Details" asp-route-id="@item.Id">
+                            <button>Details</button>
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>

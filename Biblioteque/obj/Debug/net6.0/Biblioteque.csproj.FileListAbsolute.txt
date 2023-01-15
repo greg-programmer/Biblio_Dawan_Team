@@ -1135,6 +1135,7 @@ C:\Users\33675\Source\Repos\Biblio_Dawan_Team\Biblioteque\obj\Debug\net6.0\refin
 C:\Users\33675\Source\Repos\Biblio_Dawan_Team\Biblioteque\obj\Debug\net6.0\Biblioteque.pdb
 C:\Users\33675\Source\Repos\Biblio_Dawan_Team\Biblioteque\obj\Debug\net6.0\Biblioteque.genruntimeconfig.cache
 C:\Users\33675\Source\Repos\Biblio_Dawan_Team\Biblioteque\obj\Debug\net6.0\ref\Biblioteque.dll
+<<<<<<< HEAD
 C:\Users\aurel\Source\Repos\Biblio_Dawan_Team\greg\Biblioteque\bin\Debug\net6.0\appsettings.Development.json
 C:\Users\aurel\Source\Repos\Biblio_Dawan_Team\greg\Biblioteque\bin\Debug\net6.0\appsettings.json
 C:\Users\aurel\Source\Repos\Biblio_Dawan_Team\greg\Biblioteque\bin\Debug\net6.0\Biblioteque.staticwebassets.runtime.json
@@ -1419,3 +1420,7 @@ C:\Users\aurel\Source\Repos\Biblio_Dawan_Team\greg\Biblioteque\obj\Debug\net6.0\
 C:\Users\aurel\Source\Repos\Biblio_Dawan_Team\greg\Biblioteque\obj\Debug\net6.0\Biblioteque.genruntimeconfig.cache
 C:\Users\aurel\Source\Repos\Biblio_Dawan_Team\greg\Biblioteque\obj\Debug\net6.0\ref\Biblioteque.dll
 C:\Users\aurel\source\repos\Biblio_Dawan_Team\greg\Biblioteque\bin\Debug\net6.0\System.Reflection.MetadataLoadContext.dll
+=======
+C:\Users\33675\source\repos\Biblio_Dawan_Team\Biblioteque\bin\Debug\net6.0\System.Reflection.MetadataLoadContext.dll
+C:\Users\33675\source\repos\Biblio_Dawan_Team\Biblioteque\bin\Debug\net6.0\Microsoft.OData.Edm.dll
+>>>>>>> c9e229e602811744bac6ab818b33cfafad51d15e

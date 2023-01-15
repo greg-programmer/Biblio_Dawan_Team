@@ -1,6 +1,10 @@
 {
   "Version": 1,
+<<<<<<< HEAD
   "Hash": "t4aIENSW8YpuvDTjlwtHwjJxNlV6R/7p2loeJ/H0jR4=",
+=======
+  "Hash": "ijMIEkw88QS/PSeJjS5F8+6nGz3NTfJaXYzC0GGyk/w=",
+>>>>>>> c9e229e602811744bac6ab818b33cfafad51d15e
   "Source": "Biblioteque",
   "BasePath": "_content/Biblioteque",
   "Mode": "Default",
@@ -1088,7 +1092,45 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\aurel\\source\\repos\\Biblio_Dawan_Team\\greg\\Biblioteque\\wwwroot\\Upload\\batman230600685.jpg",
+=======
+      "Identity": "C:\\Users\\33675\\source\\repos\\Biblio_Dawan_Team\\Biblioteque\\wwwroot\\Upload\\512MGB0Q12L._SX329_BO1,204,203,200_222426803.jpg",
+      "SourceId": "Biblioteque",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\33675\\source\\repos\\Biblio_Dawan_Team\\Biblioteque\\wwwroot\\",
+      "BasePath": "_content/Biblioteque",
+      "RelativePath": "Upload/512MGB0Q12L._SX329_BO1,204,203,200_222426803.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Upload\\512MGB0Q12L._SX329_BO1,204,203,200_222426803.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\33675\\source\\repos\\Biblio_Dawan_Team\\Biblioteque\\wwwroot\\Upload\\77_9782203001022_1_75221655060.jpg",
+      "SourceId": "Biblioteque",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\33675\\source\\repos\\Biblio_Dawan_Team\\Biblioteque\\wwwroot\\",
+      "BasePath": "_content/Biblioteque",
+      "RelativePath": "Upload/77_9782203001022_1_75221655060.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Upload\\77_9782203001022_1_75221655060.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\33675\\source\\repos\\Biblio_Dawan_Team\\Biblioteque\\wwwroot\\Upload\\batman223829874.jpg",
+>>>>>>> c9e229e602811744bac6ab818b33cfafad51d15e
       "SourceId": "Biblioteque",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\aurel\\source\\repos\\Biblio_Dawan_Team\\greg\\Biblioteque\\wwwroot\\",
@@ -1105,7 +1147,79 @@
       "OriginalItemSpec": "wwwroot\\Upload\\batman230600685.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\aurel\\source\\repos\\Biblio_Dawan_Team\\greg\\Biblioteque\\wwwroot\\Upload\\batman230603854.jpg",
+=======
+      "Identity": "C:\\Users\\33675\\source\\repos\\Biblio_Dawan_Team\\Biblioteque\\wwwroot\\Upload\\death_note221533518.jpg",
+      "SourceId": "Biblioteque",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\33675\\source\\repos\\Biblio_Dawan_Team\\Biblioteque\\wwwroot\\",
+      "BasePath": "_content/Biblioteque",
+      "RelativePath": "Upload/death_note221533518.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Upload\\death_note221533518.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\33675\\source\\repos\\Biblio_Dawan_Team\\Biblioteque\\wwwroot\\Upload\\death_note223743402.jpg",
+      "SourceId": "Biblioteque",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\33675\\source\\repos\\Biblio_Dawan_Team\\Biblioteque\\wwwroot\\",
+      "BasePath": "_content/Biblioteque",
+      "RelativePath": "Upload/death_note223743402.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Upload\\death_note223743402.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\33675\\source\\repos\\Biblio_Dawan_Team\\Biblioteque\\wwwroot\\Upload\\death_note223754892.jpg",
+      "SourceId": "Biblioteque",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\33675\\source\\repos\\Biblio_Dawan_Team\\Biblioteque\\wwwroot\\",
+      "BasePath": "_content/Biblioteque",
+      "RelativePath": "Upload/death_note223754892.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Upload\\death_note223754892.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\33675\\source\\repos\\Biblio_Dawan_Team\\Biblioteque\\wwwroot\\Upload\\death_note223758473.jpg",
+      "SourceId": "Biblioteque",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\33675\\source\\repos\\Biblio_Dawan_Team\\Biblioteque\\wwwroot\\",
+      "BasePath": "_content/Biblioteque",
+      "RelativePath": "Upload/death_note223758473.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Upload\\death_note223758473.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\33675\\source\\repos\\Biblio_Dawan_Team\\Biblioteque\\wwwroot\\Upload\\death_note224323404.jpg",
+>>>>>>> c9e229e602811744bac6ab818b33cfafad51d15e
       "SourceId": "Biblioteque",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\aurel\\source\\repos\\Biblio_Dawan_Team\\greg\\Biblioteque\\wwwroot\\",
@@ -1122,7 +1236,45 @@
       "OriginalItemSpec": "wwwroot\\Upload\\batman230603854.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\aurel\\source\\repos\\Biblio_Dawan_Team\\greg\\Biblioteque\\wwwroot\\Upload\\batman231246076.jpg",
+=======
+      "Identity": "C:\\Users\\33675\\source\\repos\\Biblio_Dawan_Team\\Biblioteque\\wwwroot\\Upload\\death_note225204181.jpg",
+      "SourceId": "Biblioteque",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\33675\\source\\repos\\Biblio_Dawan_Team\\Biblioteque\\wwwroot\\",
+      "BasePath": "_content/Biblioteque",
+      "RelativePath": "Upload/death_note225204181.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Upload\\death_note225204181.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\33675\\source\\repos\\Biblio_Dawan_Team\\Biblioteque\\wwwroot\\Upload\\harry220508463.jpg",
+      "SourceId": "Biblioteque",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\33675\\source\\repos\\Biblio_Dawan_Team\\Biblioteque\\wwwroot\\",
+      "BasePath": "_content/Biblioteque",
+      "RelativePath": "Upload/harry220508463.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Upload\\harry220508463.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\33675\\source\\repos\\Biblio_Dawan_Team\\Biblioteque\\wwwroot\\Upload\\harry221219625.jpg",
+>>>>>>> c9e229e602811744bac6ab818b33cfafad51d15e
       "SourceId": "Biblioteque",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\aurel\\source\\repos\\Biblio_Dawan_Team\\greg\\Biblioteque\\wwwroot\\",
@@ -1136,6 +1288,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
+<<<<<<< HEAD
       "OriginalItemSpec": "wwwroot\\Upload\\batman231246076.jpg"
     },
     {
@@ -1145,6 +1298,17 @@
       "ContentRoot": "C:\\Users\\aurel\\source\\repos\\Biblio_Dawan_Team\\greg\\Biblioteque\\wwwroot\\",
       "BasePath": "_content/Biblioteque",
       "RelativePath": "Upload/batman231705868.jpg",
+=======
+      "OriginalItemSpec": "wwwroot\\Upload\\harry221219625.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\33675\\source\\repos\\Biblio_Dawan_Team\\Biblioteque\\wwwroot\\Upload\\harry223700761.jpg",
+      "SourceId": "Biblioteque",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\33675\\source\\repos\\Biblio_Dawan_Team\\Biblioteque\\wwwroot\\",
+      "BasePath": "_content/Biblioteque",
+      "RelativePath": "Upload/harry223700761.jpg",
+>>>>>>> c9e229e602811744bac6ab818b33cfafad51d15e
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1153,6 +1317,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
+<<<<<<< HEAD
       "OriginalItemSpec": "wwwroot\\Upload\\batman231705868.jpg"
     },
     {
@@ -1162,6 +1327,17 @@
       "ContentRoot": "C:\\Users\\aurel\\source\\repos\\Biblio_Dawan_Team\\greg\\Biblioteque\\wwwroot\\",
       "BasePath": "_content/Biblioteque",
       "RelativePath": "Upload/batman232150370.jpg",
+=======
+      "OriginalItemSpec": "wwwroot\\Upload\\harry223700761.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\33675\\source\\repos\\Biblio_Dawan_Team\\Biblioteque\\wwwroot\\Upload\\harry225941509.jpg",
+      "SourceId": "Biblioteque",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\33675\\source\\repos\\Biblio_Dawan_Team\\Biblioteque\\wwwroot\\",
+      "BasePath": "_content/Biblioteque",
+      "RelativePath": "Upload/harry225941509.jpg",
+>>>>>>> c9e229e602811744bac6ab818b33cfafad51d15e
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1170,6 +1346,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
+<<<<<<< HEAD
       "OriginalItemSpec": "wwwroot\\Upload\\batman232150370.jpg"
     },
     {
@@ -1179,6 +1356,17 @@
       "ContentRoot": "C:\\Users\\aurel\\source\\repos\\Biblio_Dawan_Team\\greg\\Biblioteque\\wwwroot\\",
       "BasePath": "_content/Biblioteque",
       "RelativePath": "Upload/batman233017909.jpg",
+=======
+      "OriginalItemSpec": "wwwroot\\Upload\\harry225941509.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\33675\\source\\repos\\Biblio_Dawan_Team\\Biblioteque\\wwwroot\\Upload\\Harry-Potter-et-le-prisonnier-d-Azkaban (1)220226536.jpg",
+      "SourceId": "Biblioteque",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\33675\\source\\repos\\Biblio_Dawan_Team\\Biblioteque\\wwwroot\\",
+      "BasePath": "_content/Biblioteque",
+      "RelativePath": "Upload/Harry-Potter-et-le-prisonnier-d-Azkaban (1)220226536.jpg",
+>>>>>>> c9e229e602811744bac6ab818b33cfafad51d15e
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1187,6 +1375,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
+<<<<<<< HEAD
       "OriginalItemSpec": "wwwroot\\Upload\\batman233017909.jpg"
     },
     {
@@ -1196,6 +1385,17 @@
       "ContentRoot": "C:\\Users\\aurel\\source\\repos\\Biblio_Dawan_Team\\greg\\Biblioteque\\wwwroot\\",
       "BasePath": "_content/Biblioteque",
       "RelativePath": "Upload/batman235303759.jpg",
+=======
+      "OriginalItemSpec": "wwwroot\\Upload\\Harry-Potter-et-le-prisonnier-d-Azkaban (1)220226536.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\33675\\source\\repos\\Biblio_Dawan_Team\\Biblioteque\\wwwroot\\Upload\\Harry-Potter-et-le-prisonnier-d-Azkaban220146272.jpg",
+      "SourceId": "Biblioteque",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\33675\\source\\repos\\Biblio_Dawan_Team\\Biblioteque\\wwwroot\\",
+      "BasePath": "_content/Biblioteque",
+      "RelativePath": "Upload/Harry-Potter-et-le-prisonnier-d-Azkaban220146272.jpg",
+>>>>>>> c9e229e602811744bac6ab818b33cfafad51d15e
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1204,6 +1404,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
+<<<<<<< HEAD
       "OriginalItemSpec": "wwwroot\\Upload\\batman235303759.jpg"
     },
     {
@@ -1213,6 +1414,17 @@
       "ContentRoot": "C:\\Users\\aurel\\source\\repos\\Biblio_Dawan_Team\\greg\\Biblioteque\\wwwroot\\",
       "BasePath": "_content/Biblioteque",
       "RelativePath": "Upload/batman235720952.jpg",
+=======
+      "OriginalItemSpec": "wwwroot\\Upload\\Harry-Potter-et-le-prisonnier-d-Azkaban220146272.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\33675\\source\\repos\\Biblio_Dawan_Team\\Biblioteque\\wwwroot\\Upload\\Institut225427956.jpg",
+      "SourceId": "Biblioteque",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\33675\\source\\repos\\Biblio_Dawan_Team\\Biblioteque\\wwwroot\\",
+      "BasePath": "_content/Biblioteque",
+      "RelativePath": "Upload/Institut225427956.jpg",
+>>>>>>> c9e229e602811744bac6ab818b33cfafad51d15e
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1221,6 +1433,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
+<<<<<<< HEAD
       "OriginalItemSpec": "wwwroot\\Upload\\batman235720952.jpg"
     },
     {
@@ -1230,6 +1443,17 @@
       "ContentRoot": "C:\\Users\\aurel\\source\\repos\\Biblio_Dawan_Team\\greg\\Biblioteque\\wwwroot\\",
       "BasePath": "_content/Biblioteque",
       "RelativePath": "Upload/dbgTome1230622554.jpg",
+=======
+      "OriginalItemSpec": "wwwroot\\Upload\\Institut225427956.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\33675\\source\\repos\\Biblio_Dawan_Team\\Biblioteque\\wwwroot\\Upload\\Institut225641395.jpg",
+      "SourceId": "Biblioteque",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\33675\\source\\repos\\Biblio_Dawan_Team\\Biblioteque\\wwwroot\\",
+      "BasePath": "_content/Biblioteque",
+      "RelativePath": "Upload/Institut225641395.jpg",
+>>>>>>> c9e229e602811744bac6ab818b33cfafad51d15e
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1238,6 +1462,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
+<<<<<<< HEAD
       "OriginalItemSpec": "wwwroot\\Upload\\dbgTome1230622554.jpg"
     },
     {
@@ -1247,6 +1472,17 @@
       "ContentRoot": "C:\\Users\\aurel\\source\\repos\\Biblio_Dawan_Team\\greg\\Biblioteque\\wwwroot\\",
       "BasePath": "_content/Biblioteque",
       "RelativePath": "Upload/dbgTome1231541795.jpg",
+=======
+      "OriginalItemSpec": "wwwroot\\Upload\\Institut225641395.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\33675\\source\\repos\\Biblio_Dawan_Team\\Biblioteque\\wwwroot\\Upload\\La-Belle-et-la-Bete221002499.jpg",
+      "SourceId": "Biblioteque",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\33675\\source\\repos\\Biblio_Dawan_Team\\Biblioteque\\wwwroot\\",
+      "BasePath": "_content/Biblioteque",
+      "RelativePath": "Upload/La-Belle-et-la-Bete221002499.jpg",
+>>>>>>> c9e229e602811744bac6ab818b33cfafad51d15e
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1255,6 +1491,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
+<<<<<<< HEAD
       "OriginalItemSpec": "wwwroot\\Upload\\dbgTome1231541795.jpg"
     },
     {
@@ -1264,6 +1501,17 @@
       "ContentRoot": "C:\\Users\\aurel\\source\\repos\\Biblio_Dawan_Team\\greg\\Biblioteque\\wwwroot\\",
       "BasePath": "_content/Biblioteque",
       "RelativePath": "Upload/dbgTome1234149325.jpg",
+=======
+      "OriginalItemSpec": "wwwroot\\Upload\\La-Belle-et-la-Bete221002499.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\33675\\source\\repos\\Biblio_Dawan_Team\\Biblioteque\\wwwroot\\Upload\\zola223720685.jpg",
+      "SourceId": "Biblioteque",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\33675\\source\\repos\\Biblio_Dawan_Team\\Biblioteque\\wwwroot\\",
+      "BasePath": "_content/Biblioteque",
+      "RelativePath": "Upload/zola223720685.jpg",
+>>>>>>> c9e229e602811744bac6ab818b33cfafad51d15e
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1272,6 +1520,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
+<<<<<<< HEAD
       "OriginalItemSpec": "wwwroot\\Upload\\dbgTome1234149325.jpg"
     },
     {
@@ -1281,6 +1530,17 @@
       "ContentRoot": "C:\\Users\\aurel\\source\\repos\\Biblio_Dawan_Team\\greg\\Biblioteque\\wwwroot\\",
       "BasePath": "_content/Biblioteque",
       "RelativePath": "Upload/dbgTome1235606430.jpg",
+=======
+      "OriginalItemSpec": "wwwroot\\Upload\\zola223720685.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\33675\\source\\repos\\Biblio_Dawan_Team\\Biblioteque\\wwwroot\\Upload\\zola223758447.jpg",
+      "SourceId": "Biblioteque",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\33675\\source\\repos\\Biblio_Dawan_Team\\Biblioteque\\wwwroot\\",
+      "BasePath": "_content/Biblioteque",
+      "RelativePath": "Upload/zola223758447.jpg",
+>>>>>>> c9e229e602811744bac6ab818b33cfafad51d15e
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1289,6 +1549,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
+<<<<<<< HEAD
       "OriginalItemSpec": "wwwroot\\Upload\\dbgTome1235606430.jpg"
     },
     {
@@ -1298,6 +1559,17 @@
       "ContentRoot": "C:\\Users\\aurel\\source\\repos\\Biblio_Dawan_Team\\greg\\Biblioteque\\wwwroot\\",
       "BasePath": "_content/Biblioteque",
       "RelativePath": "Upload/dbgTome1235930892.jpg",
+=======
+      "OriginalItemSpec": "wwwroot\\Upload\\zola223758447.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\33675\\source\\repos\\Biblio_Dawan_Team\\Biblioteque\\wwwroot\\Upload\\zola225716064.jpg",
+      "SourceId": "Biblioteque",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\33675\\source\\repos\\Biblio_Dawan_Team\\Biblioteque\\wwwroot\\",
+      "BasePath": "_content/Biblioteque",
+      "RelativePath": "Upload/zola225716064.jpg",
+>>>>>>> c9e229e602811744bac6ab818b33cfafad51d15e
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1306,6 +1578,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
+<<<<<<< HEAD
       "OriginalItemSpec": "wwwroot\\Upload\\dbgTome1235930892.jpg"
     },
     {
@@ -1477,6 +1750,9 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Upload\\smiley.jpg"
+=======
+      "OriginalItemSpec": "wwwroot\\Upload\\zola225716064.jpg"
+>>>>>>> c9e229e602811744bac6ab818b33cfafad51d15e
     }
   ]
 }
