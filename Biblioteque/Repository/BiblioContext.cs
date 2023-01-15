@@ -13,10 +13,10 @@ namespace Biblioteque.Repository
             //builder.AddJsonFile("appsettings.json", optional: false);
             //var configuration = builder.Build();
             //connectionString = configuration.GetConnectionString("SQLConnection").ToString();
-            
+
         }
 
-   
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Livre>()
@@ -36,7 +36,7 @@ namespace Biblioteque.Repository
               modelBuilder.Entity<AuteurLivre>().HasOne<Auteur>(la => la.Auteurs).WithMany(la => la.AuteurLivres).HasForeignKey(lg => lg.Auteur_Id);
               modelBuilder.Entity<AuteurLivre>().HasOne<Livre>(lg => lg.Livres).WithMany(lg => lg.AuteurLivres).HasForeignKey(lg => lg.Livre_Id);*/
         }
-
+             
         public DbSet<Livre> Livres { get; set; }
         public DbSet<Auteur> Auteurs { get; set; }
         public DbSet<Genre> Genres { get; set; }

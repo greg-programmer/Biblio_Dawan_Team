@@ -13,7 +13,7 @@ namespace Biblioteque.Controllers
     public class GenresController : Controller
     {
         private readonly BiblioContext _context;
-        private GenreRepository GenreRepository;
+        private readonly GenreRepository GenreRepository;
 
         public GenresController(BiblioContext context)
         {
@@ -54,18 +54,18 @@ namespace Biblioteque.Controllers
         // POST: Genres/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Nom,Id")] Genre genre)
-        {
-            if (ModelState.IsValid) //verifie que tout les champs required sont remplis 
-            {
-                GenreRepository.Insert(genre);
-                GenreRepository.Commit();
-                return RedirectToAction(nameof(Index));
-            }
-           return View();
-        }
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public async Task<IActionResult> Create([Bind("Nom,Id")] Genre genre)
+        //{
+        //    if (ModelState.IsValid) //verifie que tout les champs required sont remplis 
+        //    {
+        //        GenreRepository.Insert(genre);
+        //        GenreRepository.Commit();
+        //        return RedirectToAction(nameof(Index));
+        //    }
+        //   return View();
+        //}
 
 
         // GET: Genres/Edit/5

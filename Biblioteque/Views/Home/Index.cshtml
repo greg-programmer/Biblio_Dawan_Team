@@ -1,4 +1,5 @@
-﻿@{
+﻿@model Biblioteque.Models.ViewModel
+@{
     ViewData["Title"] = "Home Page";
 }
 
@@ -25,46 +26,51 @@
         <main class="row">
             <aside class="shadow p-3 mb-5 bg-body rounded col-xl-3 col-lg-10 col-md-12 col-sm-12 col-xs-12 row gy-3 gx-3 animation-home">
                 <h3>Last Book</h3>
-                <a class="col-9 col-xl-6 col-md-3 col-sm-3" href="#">
-                    <img class=" img-fluid mr-3 " src="./images/Institut.jpg" />
-                </a>
-                <a class="col-9 col-xl-6 col-md-3 col-sm-3 " href="#">
-                    <img class=" img-fluid mr-3 " src="./images/zola.jpg" />
-                </a>
-                <a class="col-9 col-xl-6 col-md-3 col-sm-3" href="#">
-                    <img class="img-fluid mr-3 " src="./images/death_note.jpg" />
-                </a>
-                <a class="col-9 col-xl-6 col-md-3 col-sm-3" href="#">
-                    <img class="img-fluid mr-3 " src="./images/batman.jpg" />
-                </a>
-            </aside>
-            <article class="2 col-xl-7 col-lg-10 col-md-12 col-sm-12 d-none d-sm-block animation-home">
-                <figure class="col-xl-9 col-md-12 col-sm-12">
-                    <a href="./ficheProduit.html" class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                        <img src="" alt="Couverture livre La Bête humaine">
-                        <div class="containerUlP">
-                            <ul>
-                                <li>Titre : La Bête humaine</li>
-                                <li>Auteur : Emile Zola</li>
-                                <li>Date de parution : 1890</li>
-                                <li>Genre : Roman/Fiction</li>
-                                <p>
-                                    Résumé :
-                                    Roubaud, sous-chef de gare au Havre, employé modèle, mais ayant été injustement
-                                    l'objet d'une plainte d'un usager, est monté à Paris pour se justifier.
-                                    Sa femme Séverine en a profité pour l'accompagner et faire quelques emplettes...
-                                </p>
-                            </ul>
-                        </div>
+
+
+                @for (var i = 0; i < Model.LivreViewM.Count; i++){
+                    <a class="col-9 col-xl-6 col-md-3 col-sm-3" href="#">
+                        <img class="img-fluid"
+                         src="~/Upload/@Html.DisplayFor(modeL => modeL.LivreViewM[i].CheminImage)"
+                         alt="Couverture de Livres" />
                     </a>
-                </figure>
-            </article>
-            <aside class="shadow p-3 mb-5 bg-body rounded col-xl-2 col-lg-10 col-md-12 col-sm-12 col-xs-12 row gy-3 gx-3 animation-home">
-                <h3>Popular Book</h3>
-                <a class="col-9 col-xl-12 col-md-3 col-sm-3" href="#">
-                    <img class="img-fluid mr-3 " src="./images/harry.jpg" />
-                </a>
+                    if( i >= 5){
+                        break;
+                    }                      
+                }             
             </aside>
+         
+                <article class="2 col-xl-7 col-lg-10 col-md-12 col-sm-12 d-none d-sm-block animation-home">
+                    <figure class="col-xl-9 col-md-12 col-sm-12">
+                        <a href="./ficheProduit.html" class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                        <img class="img-fluid"
+                        src="~/Upload/@Model.LivreViewM_Nolist.CheminImage"
+                        alt="Couverture de Livres"/>                    
+                            <div class="containerUlP">
+                                <ul>
+                                    <li>Titre : @Model.LivreViewM_Nolist.Titre </li>
+                                    <li>Auteur :@Model.AuteurViewM_Nolist.Prenom @Model.AuteurViewM_Nolist.Nom </li>
+                                    <li>Date de parution : @Model.LivreViewM_Nolist.Date_Parution</li>
+                                    <li>Genre : @Model.GenreViewM_Nolist.Nom</li>
+                                    <p>Résumé :@Model.LivreViewM_Nolist.Synopsis</p>
+                                </ul>
+                            </div>
+                        </a>
+                    </figure>
+                </article>       
+            @for (var j = 0; j < Model.LivreViewM.Count; j++){
+                if(Model.LivreViewM[j].CoupDeCoeur){
+                    <aside class="shadow p-3 mb-5 bg-body rounded col-xl-2 col-lg-10 col-md-12 col-sm-12 col-xs-12 row gy-3 gx-3 animation-home">
+                        <h3>Popular Book</h3>
+                        <a class="col-9 col-xl-12 col-md-3 col-sm-3" href="#">
+                            <img class="img-fluid"
+                         src="~/Upload/@Html.DisplayFor(modeL => modeL.LivreViewM[j].CheminImage)"
+                         alt="Couverture de Livres" />
+                        </a>
+                    </aside>
+                    break;
+                }            
+            }          
         </main>
     </section>
     

@@ -1,4 +1,5 @@
-﻿using Biblioteque.Models;
+﻿using Biblioteque.Migrations;
+using Biblioteque.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace Biblioteque.Repository
@@ -7,7 +8,9 @@ namespace Biblioteque.Repository
     {
         protected BiblioContext context;
         protected DbSet<T> dbSet;
-
+        LivreRepository livreRepository;
+        GenreRepository genreRepository;
+        AuteurRepository auteurRepository;      
         public Repository(BiblioContext context)
         {
             this.context = context;
@@ -29,6 +32,23 @@ namespace Biblioteque.Repository
             dbSet.Remove(t);    
         }
 
+        public virtual void GetFilesPath(ViewModel viewModel)
+        {
+            string wwwRootPath = Environment.CurrentDirectory;
+            string fileName = Path.GetFileNameWithoutExtension(path: viewModel.LivreViewM_Nolist.Image.FileName);          
+            string extension = Path.GetExtension(viewModel.LivreViewM_Nolist.Image.FileName);
+            viewModel.LivreViewM_Nolist.CheminImage = fileName = fileName + DateTime.Now.ToString("yymmssfff") + extension;
+            string path = Path.Combine(wwwRootPath, "wwwroot", "Upload", fileName);
+            using (var stream = new FileStream(path, FileMode.Create))
+            {
+                viewModel.LivreViewM_Nolist.Image.CopyToAsync(stream); 
+            }
+            //using (var fileStream = new FileStream(path, FileMode.Create))
+            //{
+            //    await viewModel.LivreViewM_Nolist.Image.CopyToAsync(fileStream);
+            //}
+        }
+
         public virtual List<T> FindAll()
         {
             return dbSet.AsNoTracking().ToList();
@@ -42,12 +62,21 @@ namespace Biblioteque.Repository
         public void Insert(T entity)
         {
             dbSet.Add(entity);
-        }
+        }    
 
         public void Update(T entity)
         {
             dbSet.Attach(entity);
             context.Entry(entity).State = EntityState.Modified;
+        }
+
+        public virtual void DeleteImage(string path)
+        {
+            string wwwRootPath = Environment.CurrentDirectory;
+           var pathCombine =  Path.Combine(wwwRootPath, "wwwroot", "Upload", path);
+            string notCover = "not_Cover.jpg";
+            if (path != notCover)
+                File.Delete(pathCombine);
         }
     }
 }
